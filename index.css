@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "CursedTimerUlil";
+    src: url(CursedTimerUlil-Aznm.ttf);
+}
+
+
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #0369a1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 2.188rem auto;
+}
+
+#home-score, 
+#guest-score {
+    background-color: #111;
+    color: #F43F5E;
+    width: 9.375rem;
+    font-size: 5rem;
+    margin: 1.875rem;
+    padding-top: 7%;
+    border-radius: 10px;
+    font-family: 'CursedTimerUlil';
+}
+
+.home-container,
+.guest-container {
+    color: #d2d2d2;
+    text-align: center;
+}
+
+.name {
+    font-size: 3rem;
+    text-shadow: #000 2px 0 0;
+}
+
+.home {
+    color: #FCD34D;
+    
+}
+
+.btn {
+   background-color: transparent; 
+   border: 2px solid #d2d2d2;
+   color: #d2d2d2;
+   margin: 0 5px;
+   width: 2.625rem;
+   font-family: 'CursedTimerUlil';
+   font-weight: bold;
+   padding-top: 3px;
+}
+
+.game {
+    width: 4rem;
+    height: 3rem;
+    margin: auto;
+}
