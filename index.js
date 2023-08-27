@@ -3,43 +3,28 @@ let guestScore = document.getElementById("guest-score");
 let homeTotal = 0;
 let guestTotal = 0;
 
-function hadd1() {
-        homeTotal += 1;
+function add(amount, team){
+    if(team === "home"){
+        homeTotal += amount;
         homeScore.textContent = homeTotal;
+    } 
+
+    if(team === "guest") {
+        guestTotal += amount;
+        guestScore.textContent = guestTotal;
+    }
+
+    winningColor();
 }
-
-function hadd2() {
-    homeTotal += 2;
-    homeScore.textContent = homeTotal;
-}
-
-function hadd3() {
-    homeTotal += 3;
-    homeScore.textContent = homeTotal;
-}
-
-function gadd1() {
-    guestTotal += 1;
-    guestScore.textContent = guestTotal;
-}
-
-function gadd2() {
-    guestTotal += 2;
-    guestScore.textContent = guestTotal;
-}
-
-function gadd3() {
-    guestTotal += 3;
-    guestScore.textContent = guestTotal;
-}
-
-
 
 function startOver() {
     let newGame = document.getElementById("new-game");
     if(newGame) {
-        guestScore.textContent = 0;
-        homeScore.textContent = 0;
+        homeScore.innerHTML = 0;
+        console.log(homeScore);
+        guestScore.innerHTML = 0;
+        console.log(guestScore);
+        newGame = 0;
     }
 }
 
@@ -50,9 +35,8 @@ function winnerColor(){
     let color2 = color.style.backgroundColor = "#fcd34d";
     if(homeScore > guestScore){
         homeScore.textContent = color1;
-    } else if (guestScore > homeScore) {
+    }
+    if (guestScore > homeScore) {
         guestScore.textContent = color2;
-    } else {
-        null;
     }
 }
